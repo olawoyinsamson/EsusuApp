@@ -1,0 +1,23 @@
+{
+  "name": "esusuapp",
+  "version": "1.0.0",
+  "description": "Esusu Confam Ltd",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olawoyinsamson/EsusuApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olawoyinsamson/EsusuApp/issues"
+  },
+  "homepage": "https://github.com/olawoyinsamson/EsusuApp#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
