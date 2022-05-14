@@ -25,6 +25,11 @@ User login expected data
 	"Password" : "123"
 }
 
+----------------- LOGOUT ---------------------------
+ENDPOINT : https://esusuapp-api.herokuapp.com/logout
+METHOD   : GET
+Description : To logout current user
+
 ------------------ CREATE NEW GROUP ----------------------
 ENDPOINT : https://esusuapp-api.herokuapp.com/createGroup
 METHOD   : POST
