@@ -27,6 +27,16 @@ new group expected data
 	"GroupType"    : "private"
 }
 
+------------------ CONTRIBUTE MONEY HAS A GROUP MEMBER--------------------
+ENDPOINT:
+METHOD  : POST
+DATA: 
+  {
+	  "amount" : 10000,
+	  "cycle"  : 1,
+	  "group"  : "Group name here" 
+  }
+
 ----------------- Search for public group ---------------------------
 ENDPOINT : localhost:3000/getPublicGroup
 METHOD   : GET
@@ -55,6 +65,31 @@ ENDPOINT : localhost:3000/getGroupMember/:Name
 METHOD   : GET
 URL Varaible : Name
 Description :  This endpoint required that you pass in a url variable Name which stand for the name of the group that the user created
+
+
+---------------------- SEND MAIL NOTIFICATION ------------------
+ENDPOINT : localhost:3000/send_groupinvitation
+METHOD  : POST
+DATA REQUIRED
+ {
+	"email"     : "example@yahoo.com",
+	"group" : "Group2"
+}
+
+SUCCESS MSG
+ {
+	"Status"     : "Complete",
+	"Code"       : 00,
+	"msg"        : "Group invitation successfully sent",
+	"data"       : "fhhf85885855955050505"
+}
+NB : The return data content is to be used to join the group followed by the user username, see the below endpoint on the completetion 
+
+---------------------- JOIN  A GROUP VIA INVITATION LINK ------------------
+ENDPOINT : localhost:3000//joinagroup/:id/:username
+METHOD   : GET
+DATA REQUIRED
+	URL Variable ID and USERNAME
 
 
 
