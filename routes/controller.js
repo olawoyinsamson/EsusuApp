@@ -7,6 +7,8 @@ var contributionSchema = require('../models/contribution');
 var invitationSchema = require('../models/groupInvitation');
 var nodemailer = require("nodemailer");
 var bcrypt = require("bcrypt");
+const user = require("../models/user");
+const { default: mongoose } = require("mongoose");
 var salt = bcrypt.genSaltSync(10);
 var sess;
 var API_URL = "https://esusuapp.heroku.com/";
@@ -133,7 +135,6 @@ router.get("/joingroup/:name", async function(req,res){
         // Get group details
         groupSchema.find({Name : Name},function(err,group){
             if(err) console.log(err);
-            console.log(group._id);
             group_id = group[0]._id;
             // Check group member collection to get total group member
  
@@ -179,21 +180,14 @@ router.get("/getGroupMember/:Name", async function(req,res){
             if(group.length == 0){
                 res.send({Status : "Error" , Code : 01 , msg : "Your are not the admin of group "+ Name});
             } else{
-							var rt  = []
-							var rt2 = []
+							var rt  = [];
+
 							groupMemberSchema.find({GroupId : group[0]._id},function(err,group_member){
 								if(err) console.log(err);
 								for(var x=0;x<group_member.length;x++){
 									rt.push(userSchema.findById({_id : group_member[x].UserId}));                     
 								}
 
-								Promise.all(rt).then(results=> {
-									results.forEach(item=>{
-										var name = item.FirstName + " " + item.LastName;
-										rt2.push({name  : name});
-										console.log(name);
-									})
-								})
 								res.send({Status : "Complete" , Code : 00 , msg : "Transaction successful", data : rt2});
 							});	
             }

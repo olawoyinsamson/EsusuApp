@@ -1,6 +1,9 @@
 # EsusuApp
 Esusu Confam Ltd
 
+------------------ USER REGISTRATION--------------------
+ENDPOINT : https://esusuapp-api.herokuapp.com/register
+METHOD   : POST
 
 User registration data format
 {
@@ -12,11 +15,19 @@ User registration data format
 	"Password" : "123"
 }
 
+----------------- LOGIN ---------------------------
+ENDPOINT : https://esusuapp-api.herokuapp.com/login
+METHOD   : POST
+
 User login expected data
 {
 	"Username" : "olawoyin.samson",
 	"Password" : "123"
 }
+
+------------------ CREATE NEW GROUP ----------------------
+ENDPOINT : https://esusuapp-api.herokuapp.com/createGroup
+METHOD   : POST
 
 new group expected data
 {
@@ -28,7 +39,7 @@ new group expected data
 }
 
 ------------------ CONTRIBUTE MONEY HAS A GROUP MEMBER--------------------
-ENDPOINT:
+ENDPOINT: https://esusuapp-api.herokuapp.com/contribute
 METHOD  : POST
 DATA: 
   {
@@ -38,7 +49,7 @@ DATA:
   }
 
 ----------------- Search for public group ---------------------------
-ENDPOINT : localhost:3000/getPublicGroup
+ENDPOINT : https://esusuapp-api.herokuapp.com/getPublicGroup
 METHOD   : GET
 Successful data return for public group search
 {
@@ -57,18 +68,21 @@ The data attribute holds the result of the public group
 
 
 ------------------------ JOIN A GROUP -----------------------
-ENDPOINT : localhost:3000/joingroup/Group2
+ENDPOINT : https://esusuapp-api.herokuapp.com/joingroup/:GroupName
+METHOD   : GET 
+DATA : URL Variable Group name
+Description : GroupName in the URL is should a group name that the user want to join
 
 
 ------------------------ GET A GROUP MEMBERS -----------------------
-ENDPOINT : localhost:3000/getGroupMember/:Name
+ENDPOINT : https://esusuapp-api.herokuapp.com/getGroupMember/:Name
 METHOD   : GET
 URL Varaible : Name
 Description :  This endpoint required that you pass in a url variable Name which stand for the name of the group that the user created
 
 
 ---------------------- SEND MAIL NOTIFICATION ------------------
-ENDPOINT : localhost:3000/send_groupinvitation
+ENDPOINT : https://esusuapp-api.herokuapp.com/send_groupinvitation
 METHOD  : POST
 DATA REQUIRED
  {
@@ -86,7 +100,7 @@ SUCCESS MSG
 NB : The return data content is to be used to join the group followed by the user username, see the below endpoint on the completetion 
 
 ---------------------- JOIN  A GROUP VIA INVITATION LINK ------------------
-ENDPOINT : localhost:3000//joinagroup/:id/:username
+ENDPOINT : https://esusuapp-api.herokuapp.com/joinagroup/:id/:username
 METHOD   : GET
 DATA REQUIRED
 	URL Variable ID and USERNAME

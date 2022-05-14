@@ -6,7 +6,8 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 
 // Connect to mongoes
-var MONGO_URL = "mongodb://localhost:27017/esusuapp";
+//var MONGO_URL = "mongodb://localhost:27017/esusuapp";
+var MONGO_URL = "mongodb+srv://root:1234@ostechnologies.pski4.mongodb.net/esusuapp?retryWrites=true&w=majority";
 mongoose.connect(MONGO_URL);
 var db = mongoose.connection;
 db.on('error',console.error.bind(console,'connection error'));
@@ -36,6 +37,6 @@ var port= 3000;
 
 app.use("/",controller);
 
-app.listen(port, function(){
+app.listen(process.env.PORT || port, function(){
     console.log("Server started @"+ port);
 })
