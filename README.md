@@ -1,4 +1,4 @@
-# EsusuApp API Documnetation
+# EsusuApp API Documentation
 
 <h3>------------------ USER REGISTRATION-------------------- </h3><br>
 ENDPOINT : https://esusuapp-api.herokuapp.com/register <br>
