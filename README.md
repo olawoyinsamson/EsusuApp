@@ -6,13 +6,13 @@ METHOD   : POST<br>
 
 User registration data format <br>
 <code>
-	{ <br>
-		"FirstName" : "Samson", <br>
-		"LastName" : "Olawoyin",<br>
-		"Username" : "olawoyin.samson",<br>
-		"Email"    : "samson@yahoo.com",<br>
-		"Phone"    : "08035561859", <br>
-		"Password" : "123" <br>
+	{ 
+		"FirstName" : "Samson", 
+		"LastName" : "Olawoyin",
+		"Username" : "olawoyin.samson",
+		"Email"    : "samson@yahoo.com",
+		"Phone"    : "08035561859", 
+		"Password" : "123" 
 	}
 </code>
 <br>
@@ -23,9 +23,9 @@ METHOD   : POST <br>
 
 User login expected data <br>
 <code>
-	{ <br>
-		"Username" : "olawoyin.samson",<br>
-		"Password" : "123" <br>
+	{ 
+		"Username" : "olawoyin.samson",
+		"Password" : "123" 
 	}
 </code>
 
@@ -43,12 +43,12 @@ DESCRIPTION : <mark>Group Types are [public , private]</mark><br>
 
 new group expected data<br>
 <code>
-	{<br>
-		"Name" : "Group1", <br>
-		"Description" : "The first contribution group",<br>
-		"PeriodicAmount" : 10000,<br>
-		"Capacity"    : 10,<br>
-		"GroupType"    : "private" <br>
+	{
+		"Name" : "Group1", 
+		"Description" : "The first contribution group",
+		"PeriodicAmount" : 10000,
+		"Capacity"    : 10,
+		"GroupType"    : "private" 
 	}
 </code>
 <br>
@@ -59,10 +59,10 @@ METHOD  : POST <br>
 DESCRIPTION : User must be login first before they can do their contribution <br>
 DATA: <br>
 <code>
-  { <br>
-	  "amount" : 10000, <br>
-	  "cycle"  : 1, <br>
-	  "group"  : "Group name here" <br>
+  { 
+	  "amount" : 10000, 
+	  "cycle"  : 1, 
+	  "group"  : "Group name here" 
   }
 </code>
 <br>
@@ -73,14 +73,14 @@ METHOD   : GET <br>
 Successful data return for public group search <br>
 <code>
 { <br>
-	"Status": "Complete", <br>
-	"Code": 0, <br>
-	"msg": "Transaction successful", <br>
-	"data": [ <br>
-		"Group2", <br>
-		"Group3", <br>
-		"Group4", <br>
-		"Group 5" <br>
+	"Status": "Complete", 
+	"Code": 0, 
+	"msg": "Transaction successful", 
+	"data": [ 
+		"Group2",
+		"Group3", 
+		"Group4", 
+		"Group 5" 
 	]
 }
 </code>
@@ -130,7 +130,7 @@ SUCCESS MSG <br>
 ENDPOINT : https://esusuapp-api.herokuapp.com/joinagroup/:id/:username <br>
 METHOD   : GET <br>
 DATA REQUIRED <br>
-	URL Variable ID and USERNAME
+	URL Variable ID and USERNAME. ID is the data return from Send mail notification endpoint.
 
 
 
