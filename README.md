@@ -1,9 +1,9 @@
 # EsusuApp
-Esusu Confam Ltd
+<h1>Esusu Confam Ltd </h1> <br>
 
------------------- USER REGISTRATION--------------------
+<h3>------------------ USER REGISTRATION-------------------- </h3><br>
 ENDPOINT : https://esusuapp-api.herokuapp.com/register
-METHOD   : POST
+METHOD   : POST<br>
 
 User registration data format
 {
@@ -14,8 +14,9 @@ User registration data format
 	"Phone"    : "08035561859",
 	"Password" : "123"
 }
+<br>
 
------------------ LOGIN ---------------------------
+<h3>----------------- LOGIN ---------------------------</h3><br>
 ENDPOINT : https://esusuapp-api.herokuapp.com/login
 METHOD   : POST
 
@@ -24,15 +25,16 @@ User login expected data
 	"Username" : "olawoyin.samson",
 	"Password" : "123"
 }
-
------------------ LOGOUT ---------------------------
+<br>
+<h3>----------------- LOGOUT ---------------------------</h3><br>
 ENDPOINT : https://esusuapp-api.herokuapp.com/logout
 METHOD   : GET
 Description : To logout current user
+<br>
 
------------------- CREATE NEW GROUP ----------------------
-ENDPOINT : https://esusuapp-api.herokuapp.com/createGroup
-METHOD   : POST
+<h3>------------------ CREATE NEW GROUP ----------------------</h3> <br>
+ENDPOINT : https://esusuapp-api.herokuapp.com/createGroup  <br>
+METHOD   : POST<br>
 
 new group expected data
 {
@@ -42,9 +44,10 @@ new group expected data
 	"Capacity"    : 10,
 	"GroupType"    : "private"
 }
+<br>
 
------------------- CONTRIBUTE MONEY HAS A GROUP MEMBER--------------------
-ENDPOINT: https://esusuapp-api.herokuapp.com/contribute
+<h3>------------------ CONTRIBUTE MONEY HAS A GROUP MEMBER--------------------</h3><br>
+ENDPOINT: https://esusuapp-api.herokuapp.com/contribute<br>
 METHOD  : POST
 DATA: 
   {
@@ -52,11 +55,12 @@ DATA:
 	  "cycle"  : 1,
 	  "group"  : "Group name here" 
   }
+<br>
 
------------------ Search for public group ---------------------------
-ENDPOINT : https://esusuapp-api.herokuapp.com/getPublicGroup
-METHOD   : GET
-Successful data return for public group search
+<h3>----------------- Search for public group ---------------------------</h3><br>
+ENDPOINT : https://esusuapp-api.herokuapp.com/getPublicGroup <br>
+METHOD   : GET <br>
+Successful data return for public group search <br>
 {
 	"Status": "Complete",
 	"Code": 0,
@@ -71,24 +75,24 @@ Successful data return for public group search
 
 The data attribute holds the result of the public group
 
-
------------------------- JOIN A GROUP -----------------------
-ENDPOINT : https://esusuapp-api.herokuapp.com/joingroup/:GroupName
-METHOD   : GET 
+<br>
+<h3>------------------------ JOIN A GROUP -----------------------</h3>
+ENDPOINT : https://esusuapp-api.herokuapp.com/joingroup/:GroupName <bR>
+METHOD   : GET <br>
 DATA : URL Variable Group name
 Description : GroupName in the URL is should a group name that the user want to join
+<br>
 
-
------------------------- GET A GROUP MEMBERS -----------------------
-ENDPOINT : https://esusuapp-api.herokuapp.com/getGroupMember/:Name
+<h3>------------------------ GET A GROUP MEMBERS -----------------------</h3>
+ENDPOINT : https://esusuapp-api.herokuapp.com/getGroupMember/:Name <br>
 METHOD   : GET
 URL Varaible : Name
 Description :  This endpoint required that you pass in a url variable Name which stand for the name of the group that the user created
 
-
----------------------- SEND MAIL NOTIFICATION ------------------
-ENDPOINT : https://esusuapp-api.herokuapp.com/send_groupinvitation
-METHOD  : POST
+<br>
+<h3>---------------------- SEND MAIL NOTIFICATION ------------------</h3> <br>
+ENDPOINT : https://esusuapp-api.herokuapp.com/send_groupinvitation <br>
+METHOD  : POST <br>
 DATA REQUIRED
  {
 	"email"     : "example@yahoo.com",
@@ -102,12 +106,14 @@ SUCCESS MSG
 	"msg"        : "Group invitation successfully sent",
 	"data"       : "fhhf85885855955050505"
 }
-NB : The return data content is to be used to join the group followed by the user username, see the below endpoint on the completetion 
+<p>NB : The return data content is to be used to join the group followed by the user username, see the below endpoint on the completetion.  </p>
+<br>
 
----------------------- JOIN  A GROUP VIA INVITATION LINK ------------------
-ENDPOINT : https://esusuapp-api.herokuapp.com/joinagroup/:id/:username
-METHOD   : GET
-DATA REQUIRED
+
+<h3>---------------------- JOIN  A GROUP VIA INVITATION LINK ------------------ </h3> <br>
+ENDPOINT : https://esusuapp-api.herokuapp.com/joinagroup/:id/:username <br>
+METHOD   : GET <br>
+DATA REQUIRED <br>
 	URL Variable ID and USERNAME
 
 
